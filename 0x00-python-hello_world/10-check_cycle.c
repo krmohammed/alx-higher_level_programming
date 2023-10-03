@@ -12,6 +12,9 @@ int check_cycle(listint_t *list)
 {
 	listint_t *temp = list;
 
+	if (list == NULL)
+		return (0);
+
 	do {
 		temp = temp->next;
 		if (temp == list)
