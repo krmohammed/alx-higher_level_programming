@@ -2,6 +2,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+/**
+ * insert_node - inserts a new node a the specified index
+ * @head: pointer to the pointer of the head node
+ * @number: node data
+ *
+ * Return: pointer to head node on success, NULL otherwise
+ */
 listint_t *insert_node(listint_t **head, int number)
 {
 	listint_t *temp, *ptr, *new;
@@ -32,7 +39,7 @@ listint_t *insert_node(listint_t **head, int number)
 			new->next = NULL;
 			return (*head);
 		}
-		temp->next = temp;
+		temp = temp->next;
 	}
 
 	new->next = ptr->next;
