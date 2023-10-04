@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 for c in range(100):
-    if c < 10:
-        print("{}{}".format(0, c), end=', ')
+    if c >= 99:
+        print("{}".format(c))
         continue
-    print("{}".format(c), end=', ')
+    print("{:02d}".format(c), end=', ')
