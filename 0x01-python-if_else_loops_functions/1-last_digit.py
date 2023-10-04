@@ -6,7 +6,7 @@ if number > 0:
 else:
     last = -((-number) % 10)
 
-print("Last digit of {} is {}".format(number, last), end=' ')
+print("Last digit of {:d} is {:d}".format(number, last), end=' ')
 if last > 5:
     print("and is greater than 5")
 elif last == 0:
