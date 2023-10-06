@@ -1,19 +1,8 @@
 #!/usr/bin/python3
-def __init__():
-    return True
-
-
-def my_secret_santa():
-    return True
-
-
-def print_school():
-    return True
-
-
-def print_hidden():
-    return True
-
-print(my_secret_santa.__name__)
-print(print_school.__name__)
-print(print_hidden.__name__)
+import hidden_4
+if __name__ == '__main__':
+    hidden_names = dir(hidden_4)
+    for i in hidden_names:
+        if i.startswith('__'):
+            continue
+        print(i)
