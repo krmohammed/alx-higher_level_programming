@@ -13,10 +13,10 @@ if __name__ == "__main__":
     b = int(sys.argv[3])
 
     if operator == '+':
-        print("{:d} + {:d} = {:d}".format(a, b, calculator.add(a, b)))
+        print("{} + {} = {}".format(a, b, calculator.add(a, b)))
     elif operator == '-':
-        print("{:d} - {:d} = {:d}".format(a, b, calculator.sub(a, b)))
+        print("{} - {} = {}".format(a, b, calculator.sub(a, b)))
     elif operator == '*':
-        print("{:d} * {:d} = {:d}".format(a, b, calculator.mul(a, b)))
+        print("{} * {} = {}".format(a, b, calculator.mul(a, b)))
     elif operator == '/':
-        print("{:d} / {:d} = {:d}".format(a, b, calculator.div(a, b)))
+        print("{} / {} = {}".format(a, b, calculator.div(a, b)))
