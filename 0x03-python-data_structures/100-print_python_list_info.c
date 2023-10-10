@@ -1,6 +1,12 @@
 #include <Python.h>
 #include <stdio.h>
 
+/**
+ * print_python_list_info - prints basic info about python lists
+ * @p: pointer to python object
+ *
+ */
+
 void print_python_list_info(PyObject *p)
 {
 	int size, allocated, k;
