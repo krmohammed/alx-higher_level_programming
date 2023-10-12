@@ -6,4 +6,5 @@ def best_score(a_dictionary):
     for i, j in a_dictionary.items():
         if j == best:
             return i
-    return None
+    else:
+        return None
