@@ -46,12 +46,12 @@ void print_python_bytes(PyObject *p)
 		return;
 	}
 	size = PyBytes_Size(p);
-	str_rep = PyBytes_AsString(p);
+	str_rep = ((PyBytesObject *)p)->ob_sval;;
 	printf("  size: %d\n", size);
 	prinf("  trying string: %s\n", str_rep);
 
 	printf("  first %d bytes:", size > 10 ? 10 : size + 1);
 	for (i = 0; i <= size && i < 10; i++)
-		printf(" %02x", str_rep[i]);
+		printf(" %02x", (unsigned char)str_rep[i]);
 	prinf("\n");
 }
