@@ -36,8 +36,7 @@ void print_python_list(PyObject *p)
  */
 void print_python_bytes(PyObject *p)
 {
-	int i, size, allocated;
-	PyObject *item;
+	int i, size;
 	char *str_rep = NULL;
 
 	printf("[.] bytes object info\n");
