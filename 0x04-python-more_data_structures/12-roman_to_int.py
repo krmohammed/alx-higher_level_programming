@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 def roman_to_int(roman_string):
-    if isinstance(roman_string, str) or roman_string is not None:
+    if isinstance(roman_string, str) and roman_string is not None:
         r_dict = {
                 'I': 1,
                 'V': 5,
