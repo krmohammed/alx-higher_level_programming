@@ -18,6 +18,7 @@ void print_python_list(PyObject *p)
 		return;
 	}
 
+	setbuf(stdout, NULL);
 	size = ((PyVarObject *)p)->ob_size;
 	allocated = ((PyListObject *)p)->allocated;
 
@@ -49,6 +50,7 @@ void print_python_bytes(PyObject *p)
 		return;
 	}
 
+	setbuf(stdout, NULL);
 	size = ((PyVarObject *)p)->ob_size;
 	str = ((PyBytesObject *)p)->ob_sval;
 
@@ -79,6 +81,7 @@ void print_python_float(PyObject *p)
 		return;
 	}
 
+	setbuf(stdout, NULL);
 	value = ((PyFloatObject *)p)->ob_fval;
 
 	printf("[.] float object info\n");
