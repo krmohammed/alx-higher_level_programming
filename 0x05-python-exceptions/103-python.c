@@ -9,7 +9,7 @@
 
 void print_python_list(PyObject *p)
 {
-	int size , allocated, k;
+	int size, allocated, k;
 	PyObject *item;
 
 	if (!PyList_Check(p))
