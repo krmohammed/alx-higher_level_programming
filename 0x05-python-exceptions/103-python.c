@@ -57,7 +57,7 @@ void print_python_bytes(PyObject *p)
 	printf("  trying string: %s\n", str);
 
 	for (i = 0; i < (size < 10 ? size : 10); i++)
-		printf("%02x ", str[i] && 0xff);
+		printf("first %d bytes: %02x ", size, str[i] && 0xff);
 
 	printf("\n");
 }
