@@ -1,3 +1,4 @@
+#!/usr/bin/python3 -u
 import ctypes
 
 lib = ctypes.CDLL('./libPython.so')
