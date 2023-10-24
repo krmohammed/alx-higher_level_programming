@@ -1,6 +1,12 @@
 #include <Python.h>
 #include <stdio.h>
 
+/**
+ * print_python_list - prints basic info about Python lists
+ * @p: list object
+ *
+ */
+
 void print_python_list(PyObject *p)
 {
 	int size , allocated, k;
@@ -26,6 +32,11 @@ void print_python_list(PyObject *p)
 	}
 }
 
+/**
+ * print_python_bytes - prints basic info about Python bytes
+ * @p: byte object
+ *
+ */
 
 void print_python_bytes(PyObject *p)
 {
@@ -51,6 +62,12 @@ void print_python_bytes(PyObject *p)
 	printf("\n");
 }
 
+
+/**
+ * print_python_float - prints basic info about Python floats
+ * @p: float object
+ *
+ */
 
 void print_python_float(PyObject *p)
 {
