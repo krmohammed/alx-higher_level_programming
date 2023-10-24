@@ -16,13 +16,13 @@ void print_python_list(PyObject *p)
 	allocated = ((PyListObject *)p)->allocated;
 
 	printf("[*] Python list info\n");
-	printf("[*] Size of the Python List = %d\n");
-	printf("[*] Allocated = %d\n");
+	printf("[*] Size of the Python List = %d\n", size);
+	printf("[*] Allocated = %d\n", allocated);
 
 	for (k = 0; k < size; k++)
 	{
-		item = ((PyList_Object *)p)->ob_item[i];
-		printf("Element %d: %s\n", k, item->ob_type->tp_name);i
+		item = ((PyListObject *)p)->ob_item[k];
+		printf("Element %d: %s\n", k, item->ob_type->tp_name);
 	}
 }
 
@@ -39,7 +39,7 @@ void print_python_bytes(PyObject *p)
 	}
 
 	size = ((PyVarObject *)p)->ob_size;
-	str = ((PyObjects *)p)->ob_sval;
+	str = ((PyBytesObject *)p)->ob_sval;
 
 	printf("[.] bytes object info\n");
 	printf("  size: %d\n", size);
@@ -62,7 +62,7 @@ void print_python_float(PyObject *p)
 		return;
 	}
 
-	value = ((PyFloat_Object *)p)->ob_fval;
+	value = ((PyFloatObject *)p)->ob_fval;
 
 	printf("[.] float object info\n");
 	printf("  value: %.17g\n", value);
