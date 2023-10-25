@@ -70,27 +70,21 @@ class SinglyLinkedList:
         Args:
             value (int): value for node data
         """
-        if self.__head == None:
-            self.__head = Node(value)
-            return
-        ptr = Node(value)
-        tmp = self.__head
-        tmp2 = tmp
-        while tmp is not None and value >= tmp.data:
-            tmp2 = tmp
-            tmp = tmp.next_node
-        if tmp is None:
-            tmp2.next_node = ptr
-            return
-        ptr.next_node = tmp
-        tmp2.next_node = ptr
+        new_node = Node(value)
+        if self.__head is None or self.__head.data >= value:
+            new_node.next_node = self.__head
+            self.__head = new_node
+        else:
+            ptr = self.__head
+            while ptr.next_node is not None and ptr.next_node.data < value:
+                ptr = ptr.next_node
+            new_node.next_node = ptr.next_node
+            ptr.next_node = new_node
 
     def __str__(self):
         my_list = ''
-        if self.__head is None:
-            return my_list
         ptr = self.__head
         while ptr is not None:
-            my_list += str(ptr.data)
+            my_list += str(ptr.data) + '\n'
             ptr = ptr.next_node
         return my_list.rstrip()
