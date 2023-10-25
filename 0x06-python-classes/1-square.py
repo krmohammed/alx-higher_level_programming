@@ -3,6 +3,7 @@
 Defines a square class
 """
 
+
 class Square:
     """
     Square class initializes size attribute privately
