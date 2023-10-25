@@ -8,9 +8,9 @@ class MagicClass:
     MagicClass from a bytecode
     """
     def __init__(self, radius=0):
-        if type(radius) is not int or type(radius) is not float:
+        if type(radius) is not int and type(radius) is not float:
             raise TypeError('radius must be a number')
-        self.radius = radius
+        self.__radius = radius
 
     def area(self):
         """area of a circle"""
