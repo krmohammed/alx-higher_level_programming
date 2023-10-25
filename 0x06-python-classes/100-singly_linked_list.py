@@ -16,8 +16,8 @@ class Node:
             data (int): node data
             next_node (Node): next node element
         """
-        self.__data = data
-        self.__next_node = next_node
+        self.data = data
+        self.next_node = next_node
 
     @property
     def data(self):
@@ -32,7 +32,8 @@ class Node:
     def data(self, value):
         if not isinstance(value, int):
             raise TypeError("data must be an integer")
-        self.__data = value
+        else:
+            self.__data = value
 
     @property
     def next_node(self):
@@ -45,9 +46,7 @@ class Node:
 
     @next_node.setter
     def next_node(self, value):
-        if value is None:
-            self.__next_node = value
-        elif not isinstance(value, Node):
+        if not isinstance(value, Node) and value is not None:
             raise TypeError("next_node must be a Node object")
         else:
             self.__next_node = value
