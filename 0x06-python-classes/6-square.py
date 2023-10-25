@@ -23,7 +23,7 @@ class Square:
             ValueError: if size is less than 0
         """
         self.__size = size
-        self.__position = position
+        self.position = position
 
     @property
     def size(self):
