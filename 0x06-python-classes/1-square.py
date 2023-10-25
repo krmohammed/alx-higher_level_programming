@@ -14,7 +14,7 @@ class Square:
     def __init__(self, size):
         """
         creates the paramaters for each instance of this class
-        
+
         Args:
             size (int): size of square
         """
