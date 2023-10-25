@@ -1,6 +1,6 @@
 #!/bin/usr/python3
-"""Magic Class doing exactly as the Python bytecode
-"""
+"""Magic Class doing exactly as the Python bytecode"""
+import math
 
 
 class MagicClass:

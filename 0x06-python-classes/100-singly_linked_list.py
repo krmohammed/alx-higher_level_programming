@@ -1,16 +1,30 @@
 #!/usr/bin/python3
+"""
+Implementation of linked list in python
+"""
+
+
 class Node:
     """
+    a node class to represent a linked list node
     """
     def __init__(self, data, next_node=None):
         """
+        initializes private attributes
+
+        Args:
+            data (int): node data
+            next_node (Node): next node element
         """
         self.__data = data
         self.__next_node = next_node
 
     @property
     def data(self):
-        """
+        """data attribute's getter function
+
+        Returns:
+            data attribute's value
         """
         return self.__data
 
@@ -22,7 +36,10 @@ class Node:
 
     @property
     def next_node(self):
-        """
+        """next_node attribute's getter function
+
+        Returns:
+            next_node attribute's value
         """
         return self.__next_node
 
@@ -35,24 +52,45 @@ class Node:
 
 class SinglyLinkedList:
     """
+    linked in class to implement a linked list
     """
     def __init__(self):
         """
+        initializes the head node
+
+        Args:
+            head (Node): head node
         """
         self.__head = None
 
     def sorted_insert(self, value):
         """
+        inserts a new node into the correct sorted position
+
+        Args:
+            value (int): value for node data
         """
         if self.__head == None:
             self.__head = Node(value)
             return
         ptr = Node(value)
         tmp = self.__head
-        tmp2 = tmp.next_node
-        while tmp is not None:
-            if value <= tmp.data:
-                break
+        tmp2 = tmp
+        while tmp is not None and value >= tmp.data:
+            tmp2 = tmp
             tmp = tmp.next_node
-        ptr.next_node = tmp.next_node
-        tmp.next_node = ptr
+        if tmp is None:
+            tmp2.next_node = ptr
+            return
+        ptr.next_node = tmp
+        tmp2.next_node = ptr
+
+    def __str__(self):
+        my_list = ''
+        if self.__head is None:
+            return my_list
+        ptr = self.__head
+        while ptr is not None:
+            my_list += str(ptr.data)
+            ptr = ptr.next_node
+        return my_list.rstrip()
