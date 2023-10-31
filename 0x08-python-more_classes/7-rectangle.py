@@ -19,6 +19,7 @@ class Rectangle:
             height (int): rectangle's height
         """
         type(self).number_of_instances += 1
+        self.print_symbol = type(self).print_symbol
         self.width = width
         self.height = height
 
@@ -82,7 +83,7 @@ class Rectangle:
             return str_rep
         for i in range(self.__height):
             for j in range(self.__width):
-                str_rep += type(self).print_symbol
+                str_rep += str(self.print_symbol)
             str_rep += '\n'
         return str_rep.rstrip()
 
