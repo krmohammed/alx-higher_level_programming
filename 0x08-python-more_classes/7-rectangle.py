@@ -19,7 +19,6 @@ class Rectangle:
             height (int): rectangle's height
         """
         type(self).number_of_instances += 1
-        self.print_symbol = type(self).print_symbol
         self.width = width
         self.height = height
 
