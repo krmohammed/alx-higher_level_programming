@@ -1,0 +1,68 @@
+======================================================
+	Test cases for the module 4-print_square
+======================================================
+
+
+Checking documentation:
+	>>> docs = __import__('4-print_square').__doc__
+	>>> len(docs) > 1
+	True
+
+	>>> func_docs = __import__('4-print_square').print_square.__doc__
+	>>> len(func_docs) > 1
+	True
+
+Importing function:
+	>>> print_square = __import__('4-print_square').print_square
+
+
+Test cases for positive integers:
+	>>> print_square(4)
+	####
+	####
+	####
+	####
+
+	>>> print_square(6)
+	######
+	######
+	######
+	######
+	######
+	######
+
+	>>> print_square(0)
+
+
+
+Test cases for negative integers:
+	>>> print_square(-48)
+	Traceback (most recent call last):
+		...
+	ValueError: size must be >= 0
+
+	>>> print_square(-9487)
+	Traceback (most recent call last):
+		...
+	ValueError: size must be >= 0
+
+Test cases for types:
+	>>> print_square('8')
+	Traceback (most recent call last):
+		...
+	TypeError: size must be an integer
+
+	>>> print_square({'size': 9})
+	Traceback (most recent call last):
+		...
+	TypeError: size must be an integer
+
+Test cases for floats:
+	>>> print_square(2.8)
+	##
+	##
+
+	>>> print_square(-3.9)
+	Traceback (most recent call last):
+		...
+	TypeError: size must be an integer

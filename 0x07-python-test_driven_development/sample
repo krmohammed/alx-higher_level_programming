@@ -1,0 +1,30 @@
+======================================================
+	Test cases for the module 3-say_my_name
+======================================================
+
+
+Checking documentation:
+	>>> docs = __import__('3-say_my_name.p').__doc__
+	>>> len(docs) > 1
+	True
+
+	>>> func_docs = __import__('3-say_my_name').say_my_name.__doc__
+	>>> len(func_docs) > 1
+	True
+
+Importing function:
+	>>> say_my_name = __import__('3-say_my_name.py').say_my_name
+
+
+Test cases for first name:
+	>>>
+
+
+Test cases for last name:
+	>>>
+
+Test cases for no args:
+	>>>
+
+Test cases for types:
+	>>>

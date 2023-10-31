@@ -1,0 +1,50 @@
+=========================================
+Test cases for the module 0-add_integer
+=========================================
+
+Checking documentation (module and function):
+	>>> docs = __import__("0-add_integer").__doc__
+	>>> len(docs) > 1
+	True
+	>>> func_docs = __import__("0-add_integer").add_integer.__doc__
+	>>> len(func_docs) > 1
+	True
+
+Importing module function:
+	>>> add_integer = __import__('0-add_integer').add_integer
+
+Test case for positive integers:
+	>>> add_integer(1, 2)
+	3
+	>>> add_integer(38, 93)
+	131
+
+Test case for one arguments:
+	>>> add_integer(98)
+	196
+	>>> add_integer(2)
+	100
+
+Test case for negative numbers:
+	>>> add_integer(100, -2)
+	98
+	>>> add_integer(-43, -8)
+	-51
+	>>> add_integer(100.3, -2)
+	98
+
+Test case for floats:
+	>>> add_integer(16.7, 111.9)
+	127
+	>>> add_integer(8.2, 7.1)
+	15
+
+Test case for wrong types:
+	>>> add_integer(4, "School")
+	Traceback (most recent call last):
+		...
+	TypeError: b must be an integer
+	>>> add_integer(None)
+	Traceback (most recent call last):
+		...
+	TypeError: a must be an integer

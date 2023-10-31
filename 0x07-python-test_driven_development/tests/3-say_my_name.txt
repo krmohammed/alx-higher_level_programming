@@ -1,0 +1,53 @@
+======================================================
+	Test cases for the module 3-say_my_name
+======================================================
+
+
+Checking documentation:
+	>>> docs = __import__('3-say_my_name').__doc__
+	>>> len(docs) > 1
+	True
+
+	>>> func_docs = __import__('3-say_my_name').say_my_name.__doc__
+	>>> len(func_docs) > 1
+	True
+
+Importing function:
+	>>> say_my_name = __import__('3-say_my_name').say_my_name
+
+
+Test cases for first name:
+	>>> say_my_name('Khalilu Rahman', 'Mohammed')
+	My name is Khalilu Rahman Mohammed
+
+	>>> say_my_name(98, 'Donelly')
+	Traceback (most recent call last):
+		...
+	TypeError: first_name must be a string
+
+	>>> say_my_name({'first_name': 'Harold'}, 'Finch')
+	Traceback (most recent call last):
+		...
+	TypeError: first_name must be a string
+
+
+Test cases for last name:
+	>>> say_my_name('Kay', ['West'])
+	Traceback (most recent call last):
+		...
+	TypeError: last_name must be a string
+
+	>>> say_my_name('Harold', 'Finch')
+	My name is Harold Finch
+
+	>>> say_my_name('First', 98)
+	Traceback (most recent call last):
+		...
+	TypeError: last_name must be a string
+
+Test cases for one args:
+	>>> say_my_name("ash-Shafi'i")
+	My name is ash-Shafi'i 
+
+	>>> say_my_name('Khalil')
+	My name is Khalil 

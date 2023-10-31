@@ -1,0 +1,65 @@
+=========================================================
+	Test cases for the module 5-text_indentation
+=========================================================
+
+
+Checking documentation:
+	>>> docs = __import__('5-text_indentation').__doc__
+	>>> len(docs) > 1
+	True
+
+	[Oi
+	>>> func_docs = __import__('5-text_indentation').text_indentation.__doc__
+	>>> len(func_docs) > 1
+	True
+
+Importing function:
+	>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+
+Test cases for correct texts:
+	>>> text_indentation("What is your name? My name is Mohammed Khalilu Rahman.")
+	What is your name?
+	<BLANKLINE>
+	My name is Mohammed Khalilu Rahman.
+	<BLANKLINE>
+
+	>>> text_indentation("Documentations: great, sabeel, the way. swerve, svelte, roman. haystack")
+	Documentations:
+	<BLANKLINE>
+	great, sabeel, the way.
+	<BLANKLINE>
+	swerve, svelte, roman.
+	<BLANKLINE>
+	haystack
+	>>> text_indentation("")
+	>>> text_indentation("voluptatis? Teneo, inquit, finem illi videri nihil dolere. Transfer idem ad modestiam vel temperantiam, quae est moderatio cupiditatum rationi oboediens. Si id dicis, vicimus. Inde sermone vario sex illa a Dipylo stadia confecimus. Sin aliud quid voles, postea.")
+	voluptatis?
+	<BLANKLINE>
+	Teneo, inquit, finem illi videri nihil dolere.
+	<BLANKLINE>
+	Transfer idem ad modestiam vel temperantiam, quae est moderatio cupiditatum rationi oboediens.
+	<BLANKLINE>
+	Si id dicis, vicimus.
+	<BLANKLINE>
+	Inde sermone vario sex illa a Dipylo stadia confecimus.
+	<BLANKLINE>
+	Sin aliud quid voles, postea.
+	<BLANKLINE>
+
+	>>> text_indentation(" the first character is a space? Then skip it please.")
+	the first character is a space?
+	<BLANKLINE>
+	Then skip it please.
+	<BLANKLINE>
+
+Test cases for wrong type:
+	>>> text_indentation(3897)
+	Traceback (most recent call last):
+		...
+	TypeError: text must be a string
+
+	>>> text_indentation({'text': "voluptatis? Teneo, inquit, finem illi?"})
+	Traceback (most recent call last):
+		...
+	TypeError: text must be a string
