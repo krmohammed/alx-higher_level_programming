@@ -4,7 +4,6 @@ provides one function, text_indentation()
 """
 
 
-
 def text_indentation(text):
     """
     prints a text with 2 new lines after ., ? and :

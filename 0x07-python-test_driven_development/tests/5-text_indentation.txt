@@ -53,6 +53,15 @@ Test cases for correct texts:
 	Then skip it please.
 	<BLANKLINE>
 
+	>>> text_indentation("Holberton. School? How are you: John")
+	Holberton.
+	<BLANKLINE>
+	School?
+	<BLANKLINE>
+	How are you:
+	<BLANKLINE>
+	John
+
 Test cases for wrong type:
 	>>> text_indentation(3897)
 	Traceback (most recent call last):
