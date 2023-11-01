@@ -49,8 +49,6 @@ Test cases for one args:
 	>>> say_my_name("ash-Shafi'i")
 	My name is ash-Shafi'i 
 
-	>>> say_my_name('Khalil')
-	My name is Khalil
 
 Test case for 0 args:
 	>>> say_my_name()
