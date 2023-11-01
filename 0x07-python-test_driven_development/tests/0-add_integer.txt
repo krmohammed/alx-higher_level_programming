@@ -48,3 +48,13 @@ Test case for wrong types:
 	Traceback (most recent call last):
 		...
 	TypeError: a must be an integer
+
+	>>> add_integer(float('nan'))
+	Traceback (most recent call last):
+		...
+	ValueError: cannot convert float NaN to integer
+
+	>>> add_integer(8, float('inf'))
+	Traceback (most recent call last):
+		...
+	OverflowError: cannot convert float infinity to integer
