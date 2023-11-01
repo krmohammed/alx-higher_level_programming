@@ -22,9 +22,10 @@ class TestMaxInteger(unittest.TestCase):
         test cases for right param type (list)
         """
         self.assertEqual(max_integer([3, 5, 9, 3, 8]), 9)
-        self.assertEqual(max_integer([9, 10, 299, 3]), 299)
+        self.assertEqual(max_integer([-9, 10, 299, 3]), 299)
         self.assertEqual(max_integer([]), None)
         self.assertEqual(max_integer([3]), 3)
+        self.assertEqual(max_integer([1, 2, 8, 10]), 10)
         self.assertEqual(max_integer([7, 2]), 7)
         self.assertEqual(max_integer([-3, -2, -8, -200]), -2)
 
