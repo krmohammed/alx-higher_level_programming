@@ -48,8 +48,8 @@ def matrix_mul(m_a, m_b):
         row_p = []
         for k in range(len(m_b[0])):
             sum = 0
-            for l in range(len(m_a[0])):
-                sum += m_a[j][l] * m_b[l][k]
+            for i in range(len(m_a[0])):
+                sum += m_a[j][i] * m_b[i][k]
             row_p.append(sum)
         product.append(row_p)
     return product
