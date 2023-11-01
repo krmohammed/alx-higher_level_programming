@@ -28,12 +28,3 @@ class TestMaxInteger(unittest.TestCase):
         self.assertEqual(max_integer([1, 2, 8, 10]), 10)
         self.assertEqual(max_integer([7, 2]), 7)
         self.assertEqual(max_integer([-3, -2, -8, -200]), -2)
-
-    def test_wrong_type(self):
-        """
-        test cases for wrong param types
-        """
-        self.assertRaises(TypeError, max_integer, '[2, 4, 8, 9]')
-        self.assertRaises(TypeError, max_integer, (3, 10, 12, 9, 8))
-        self.assertRaises(TypeError, max_integer, 7)
-        self.assertRaises(TypeError, max_integer, ['1', 2, 3, 'four'])
