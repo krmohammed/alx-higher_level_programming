@@ -8,10 +8,10 @@ Checking documentation:
 	>>> len(docs) > 1
 	True
 
-	[Oi
 	>>> func_docs = __import__('5-text_indentation').text_indentation.__doc__
 	>>> len(func_docs) > 1
 	True
+
 
 Importing function:
 	>>> text_indentation = __import__('5-text_indentation').text_indentation
