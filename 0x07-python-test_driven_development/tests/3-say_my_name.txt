@@ -50,4 +50,10 @@ Test cases for one args:
 	My name is ash-Shafi'i 
 
 	>>> say_my_name('Khalil')
-	My name is Khalil 
+	My name is Khalil
+
+Test case for 0 args:
+	>>> say_my_name()
+	Traceback (most recent call last):
+		...
+	TypeError: say_my_name() missing 1 required positional argument: 'first_name'	
