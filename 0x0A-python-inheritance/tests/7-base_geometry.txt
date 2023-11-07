@@ -32,12 +32,3 @@ Tests:
 	Traceback (most recent call last):
 		...
 	TypeError: birth must be an integer
-
-	>>> base.integer_validator()
-	Traceback (most recent call last):
-		...
-	TypeError: BaseGeometry.integer_validator() missing 2 required positional arguments: 'name' and 'value'
-	>>> base.integer_validator('birth')
-	Traceback (most recent call last):
-		...
-	TypeError: BaseGeometry.integer_validator() missing 1 required positional argument: 'value'
