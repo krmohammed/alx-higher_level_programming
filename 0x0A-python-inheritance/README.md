@@ -22,6 +22,7 @@ Brief summary of each task
 - Task 2: Checks if an object is an instance of a specified class.
 - Task 3: Checks if an object is an instance of, or inherits from, a specified class.
 - Task 4: Checks if an object is an instance of a class that inherited (directly or indirectly) from the specified class.
+- Task 5: Creates an empty class named BaseGeometry.
 
 ## Prerequisites
 
