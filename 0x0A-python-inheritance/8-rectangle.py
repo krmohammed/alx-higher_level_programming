@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-provides a Square class that
+provides a Rectangle class that
 inherits from BaseGeometry class
 """
 
