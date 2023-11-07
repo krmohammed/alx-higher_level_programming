@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-provides an the BaseGeometry class
+provides a BaseGeometry class
 """
 
 
