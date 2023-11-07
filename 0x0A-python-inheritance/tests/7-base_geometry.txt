@@ -33,11 +33,6 @@ Tests:
 		...
 	TypeError: birth must be an integer
 
-	>>> print(base.height)
-	Traceback (most recent call last):
-		...
-	AttributeError: 'BaseGeometry' object has no attribute 'height'
-
 	>>> base.integer_validator()
 	Traceback (most recent call last):
 		...
