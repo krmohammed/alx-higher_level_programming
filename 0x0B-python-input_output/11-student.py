@@ -29,4 +29,5 @@ class Student:
         Args:
             json (dict): new attrs
         """
-        self.__dict__ = json
+        for key, val in json.items():
+            setattr(self, key, val)
