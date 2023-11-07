@@ -22,3 +22,8 @@ Tests:
 	Traceback (most recent call last):
 		...
 	ValueError: age must be greater than 0
+
+	>>> base integer_validator('birth', 8.7)
+	Traceback (most recent call last):
+		...
+	TypeError: width must be an integer
