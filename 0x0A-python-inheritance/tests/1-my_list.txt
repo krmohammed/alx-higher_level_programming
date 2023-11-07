@@ -2,6 +2,8 @@
 	Tests cases for module 1-my_list
 =================================================
 
+Importing:
+	>>> MyList = __import__('1-my_list').MyList
 
 Test case for empty:
 	>>> emp = MyList()
