@@ -29,6 +29,8 @@ Brief summary of each task
 - Task 9: Extends Rectangle class with area() method and custom string representation.
 - Task 10: Creates a Square class that inherits from Rectangle.
 - Task 11: Extends Square class with custom string representation.
+- Task 12: Creates a MyInt class that inverts the behavior of == and != operators.
+- Task 13: Adds a new attribute to an object if it's possible; otherwise, raises a TypeError.
 
 ## Prerequisites
 
