@@ -4,7 +4,7 @@ A brief description of your project and its purpose.
 
 ## Table of Contents
 
-- [Python - Inheritance](#project-name)
+- [Python - Inheritance](#python-inheritance)
   - [Table of Contents](#table-of-contents)
   - [Description](#description)
   - [Tasks](#tasks)
@@ -18,7 +18,7 @@ Learning Project on Python - Inheritance @ALX SWE
 
 Brief summary of each task
 - Task 0: Returns the list of available attributes and methods of an object.
-
+- Task 1: Inherits from a list and prints the list sorted in ascending order.
 
 ## Prerequisites
 
