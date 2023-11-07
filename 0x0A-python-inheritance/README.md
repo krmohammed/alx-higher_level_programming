@@ -27,6 +27,8 @@ Brief summary of each task
 - Task 7: Adds integer_validator() method to BaseGeometry to validate integer values.
 - Task 8: Creates a Rectangle class that inherits from BaseGeometry with private width and height.
 - Task 9: Extends Rectangle class with area() method and custom string representation.
+- Task 10: Creates a Square class that inherits from Rectangle.
+- Task 11: Extends Square class with custom string representation.
 
 ## Prerequisites
 
