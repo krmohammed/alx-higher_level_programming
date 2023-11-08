@@ -16,8 +16,8 @@ file_size_t = 0
 
 try:
     for line in sys.stdin:
-        parsed = line.split()
-        if len(parsed) >= 7:
+        parsed = line.strip().split()
+        if len(parsed) > 2:
             stat_code = int(parsed[-2])
             file_size = int(parsed[-1])
 
