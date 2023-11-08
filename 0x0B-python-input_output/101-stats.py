@@ -23,7 +23,7 @@ try:
             line_num += 1
 
             if line_num % 10 == 0:
-                print("Total file size: {}".format(file_size_t))
+                print("File size: {}".format(file_size_t))
                 for code, count in sorted(status_code.items()):
                     if count > 0:
                         print("{}: {}".format(code, count))
