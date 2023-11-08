@@ -15,7 +15,5 @@ if os.path.exists(filename):
 else:
     py_list = []
 
-for i in range(1, len(sys.argv)):
-    py_list.append(sys.argv[i])
-
+py_list.extend(sys.argv[1:])
 save_to_json_file(py_list, filename)
