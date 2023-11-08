@@ -17,8 +17,8 @@ try:
             file_size = int(parsed[-1])
 
             file_size_t += file_size
-            if code in status_code:
-                status_code[code] += 1
+            if stat_code in status_code:
+                status_code[stat_code] += 1
 
             line_num += 1
 
