@@ -5,7 +5,7 @@ log parsing
 import sys
 
 
-status_code = {'200': , '301': , '400': , '401': , '403': , '404': , '405': , '500': }
+status_code = {'200': 0, '301': 0, '400': 0, '401': 0, '403': 0, '404': 0, '405': 0, '500': 0}
 line_num = 0
 file_size_t = 0
 
@@ -13,8 +13,8 @@ try:
     for line in sys.stdin:
         parsed = line.split()
         if len(parsed) >= 7:
-            stat_code = int(parts[-2])
-            file_size = int(parts[-1])
+            stat_code = int(parsed[-2])
+            file_size = int(parsed[-1])
 
             file_size_t += file_size
             if code in status_code:
