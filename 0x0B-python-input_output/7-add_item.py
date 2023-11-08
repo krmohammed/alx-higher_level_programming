@@ -15,7 +15,8 @@ def main():
         py_list.append(sys.argv[i])
 
     save_to_json_file(py_list, filename)
-    return load_from_json_file(filename)
+    a = load_from_json_file(filename)
+    save_to_json_file(py_list, filename)
 
 
 if __name__ == "__main__":
