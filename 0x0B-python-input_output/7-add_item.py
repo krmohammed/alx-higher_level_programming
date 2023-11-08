@@ -10,9 +10,7 @@ load_from_json_file = __import__('6-load_from_json_file').load_from_json_file
 filename = 'add_item.json'
 
 try:
-    py = load_from_json_file(filename)
-    if isinstance(py, list):
-        py_list = py
+    py_list = load_from_json_file(filename)
 except FileNotFoundError:
     py_list = []
 
