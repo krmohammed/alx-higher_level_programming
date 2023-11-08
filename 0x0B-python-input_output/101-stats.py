@@ -13,7 +13,7 @@ try:
     for line in sys.stdin:
         parsed = line.split()
         if len(parsed) >= 7:
-            stat_code = int(parsed[-2])
+            stat_code = parsed[-2]
             file_size = int(parsed[-1])
 
             file_size_t += file_size
