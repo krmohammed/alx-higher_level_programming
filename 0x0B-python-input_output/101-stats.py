@@ -32,7 +32,6 @@ try:
                 for code, count in sorted(status_code.items()):
                     if count > 0:
                         print("{}: {}".format(code, count))
-
 except KeyboardInterrupt:
     print("Total file size: {}".format(file_size_t))
     for code, count in sorted(status_code.items()):
