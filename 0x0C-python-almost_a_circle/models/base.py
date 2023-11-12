@@ -120,7 +120,7 @@ class Base:
             csv_data = csv.writer(file)
             for obj in list_objs:
                 if cls.__name__ == 'Rectangle':
-                    csv_data.writerow([obj.id, obj.width,obj.height, 
+                    csv_data.writerow([obj.id, obj.width, obj.height,
                                        obj.x, obj.y])
                 if cls.__name__ == 'Square':
                     csv_data.writerow([obj.id, obj.size, obj.x, obj.y])
