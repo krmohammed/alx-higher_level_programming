@@ -1,14 +1,20 @@
 #!/usr/bin/python3
 """
+Provides the Rectangle class
 """
 from models.base import Base
 
 
 class Rectangle(Base):
     """
+    Rectangle class
+
+    Parent:
+        Base class
     """
     def __init__(self, width, height, x=0, y=0, id=None):
         """
+        initializes attributes of Rectangle class
         """
         super().__init__(id)
         self.width = width
@@ -18,7 +24,7 @@ class Rectangle(Base):
 
     @property
     def width(self):
-        """
+        """width getter
         """
         return self.__width
 
@@ -32,7 +38,7 @@ class Rectangle(Base):
 
     @property
     def height(self):
-        """
+        """height getter
         """
         return self.__height
 
@@ -46,7 +52,7 @@ class Rectangle(Base):
 
     @property
     def x(self):
-        """
+        """x getter
         """
         return self.__x
 
@@ -60,7 +66,7 @@ class Rectangle(Base):
 
     @property
     def y(self):
-        """
+        """y setter
         """
         return self.__y
 
@@ -74,11 +80,17 @@ class Rectangle(Base):
 
     def area(self):
         """
+        computes the area of the rectangle
+
+        Returns:
+            area value of Rectangle instance
         """
         return self.__height * self.__width
 
     def display(self):
         """
+        prints in stdout the Rectangle instance
+        with the character #
         """
         for i in range(self.__y):
             print()
@@ -91,6 +103,11 @@ class Rectangle(Base):
 
     def update(self, *args, **kwargs):
         """
+        updates `self
+
+        Args:
+            args (list): no-keyword argument
+            kwargs (dict): key-worded argument
         """
         if len(args) > 0:
             props = ['id', 'width', 'height', 'x', 'y']
@@ -102,6 +119,10 @@ class Rectangle(Base):
 
     def to_dictionary(self):
         """
+        provides the dict rep of of `self
+
+        Returns:
+            the dictionary representation of `self
         """
         return {
                 'id': self.id, 'width': self.width,
