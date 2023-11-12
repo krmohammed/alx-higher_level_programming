@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 """
+Provides Base class, parent class for
+`Rectangle and `Square
 """
 import json
 from os.path import exists
@@ -7,11 +9,13 @@ from os.path import exists
 
 class Base:
     """
+    Parent class for `Rectangle and `Square
     """
     __nb_objects = 0
 
     def __init__(self, id=None):
         """
+        initializes Base class
         """
         if id is not None:
             self.id = id
@@ -22,6 +26,13 @@ class Base:
     @staticmethod
     def to_json_string(list_dictionaries):
         """
+        serializes `list_dictionaries
+
+        Args:
+            list_dictionaries (list): list of dictionaries
+
+        Returns:
+            JSON representation of `list_dictionaries
         """
         if len(list_dictionaries) == 0 or list_dictionaries is None:
             return "[]"
@@ -30,6 +41,11 @@ class Base:
     @classmethod
     def save_to_file(cls, list_objs):
         """
+        writes JSON representation of `list_objs
+        to a file
+
+        Args:
+            list_objs (list): list of instances
         """
         filename = f"{cls.__name__}.json"
         with open(filename, "w", encoding="utf-8") as file:
@@ -39,8 +55,8 @@ class Base:
             else:
                 for obj in list_objs:
                     json_list.append(obj.to_dictionary())
-                b = cls.to_json_string(json_list)
-                file.write(b)
+                json_string = cls.to_json_string(json_list)
+                file.write(json_string)
 
     @staticmethod
     def from_json_string(json_string):
@@ -60,6 +76,14 @@ class Base:
     @classmethod
     def create(cls, **dictionary):
         """
+        creates new instance from details in
+        `dictionary
+
+        Args:
+            dictionary (dict/kwargs): dictionary
+
+        Returns:
+            an instances with attributes set
         """
         dummy = cls(4, 4)
         dummy.update(**dictionary)
@@ -68,6 +92,10 @@ class Base:
     @classmethod
     def load_from_file(cls):
         """
+        creates new intances
+
+        Returns:
+            a list of instances
         """
         filename = f"{cls.__name__}.json"
         if not exists(filename):
