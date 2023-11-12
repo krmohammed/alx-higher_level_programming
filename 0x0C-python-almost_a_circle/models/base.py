@@ -143,7 +143,8 @@ class Base:
                     continue
                 if cls.__name__ == 'Rectangle':
                     data = cls.create(id=int(row[0]), width=int(row[1]),
-                                      height=int(row[2]), x=int(row[3]), y=int(row[4]))
+                                      height=int(row[2]), x=int(row[3]),
+                                      y=int(row[4]))
                 elif cls.__name__ == 'Square':
                     data = cls.create(id=int(row[0]), size=int(row[1]),
                                       x=int(row[2]), y=int(row[3]))
