@@ -92,7 +92,7 @@ class Base:
     @classmethod
     def load_from_file(cls):
         """
-        creates new intances
+        creates new instances
 
         Returns:
             a list of instances
@@ -105,3 +105,36 @@ class Base:
             json_data = file.read()
             json_itr = cls.from_json_string(json_data)
         return [cls.create(**item) for item in json_itr]
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """
+        serializes `list_objs
+
+        Args:
+            list_objs (list): list of objects
+        """
+        filename = f"{cls.__name__}.csv"
+        with open(filename, "w", encoding="utf-8") as file:
+            if list_objs is None:
+                json_list = []
+            else:
+                json_list = [obj.to_dictionary() for obj in list_objs]
+            json_string = cls.to_json_string(json_list)
+            file.write(json_string)
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """
+        create new instances
+
+        Returns:
+            list of instances
+        """
+        filename = f"{cls.__name__}.csv"
+
+        if not exists(filename):
+            return []
+        with open(filename, "r", encoding="utf-8") as file:
+            json_data = cls.from_json_string(file.read())
+        return [cls.create(**data) for data in json_data]
