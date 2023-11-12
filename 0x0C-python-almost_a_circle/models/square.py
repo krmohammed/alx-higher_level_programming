@@ -1,20 +1,26 @@
 #!/usr/bin/python3
 """
+Provides the Square class
 """
 from models.rectangle import Rectangle
 
 
 class Square(Rectangle):
     """
+    Square class
+
+    Parents:
+        Rectangle class
     """
     def __init__(self, size, x=0, y=0, id=None):
         """
+        initializes attributes of Rectangle class
         """
         super().__init__(size, size, x, y, id)
 
     @property
     def size(self):
-        """
+        """size getter
         """
         return self.width
 
@@ -25,6 +31,11 @@ class Square(Rectangle):
 
     def update(self, *args, **kwargs):
         """
+        updates `self
+
+        Args:
+            args (list): no-keyword argument
+            kwargs (dict): key-worded argument
         """
         if len(args) > 0:
             props = ['id', 'size', 'x', 'y']
@@ -39,6 +50,10 @@ class Square(Rectangle):
 
     def to_dictionary(self):
         """
+        provides the dict rep of of `self
+
+        Returns:
+            the dictionary representation of `self
         """
         return {
                 'id': self.id,
