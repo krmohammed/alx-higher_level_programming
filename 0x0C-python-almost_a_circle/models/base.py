@@ -86,7 +86,7 @@ class Base:
         Returns:
             an instances with attributes set
         """
-        dummy = cls(4, 4)
+        dummy = cls(0, 0)
         dummy.update(**dictionary)
         return dummy
 
