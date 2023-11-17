@@ -155,8 +155,8 @@ class Base:
     @staticmethod
     def draw(list_rectangles, list_squares):
         turt = turtle.Turtle()
-        turt.screen.bgcolor('#CC5803')
-        turt.color('#44CFCB', '#2A4494')
+        turt.screen.bgcolor('#2A4494')
+        turt.color('#44CFCB', '#5299D3')
         turt.speed('slowest')
         turt.pensize(3)
 
