@@ -6,6 +6,7 @@ Provides Base class, parent class for
 import json
 from os.path import exists
 import csv
+import turtle
 
 
 class Base:
@@ -150,3 +151,43 @@ class Base:
                                       x=int(row[2]), y=int(row[3]))
                 list_data.append(data)
         return list_data
+
+    @staticmethod
+    def draw(list_rectangles, list_squares):
+        turt = turtle.Turtle()
+        turt.screen.bgcolor('#CC5803')
+        turt.color('#44CFCB', '#2A4494')
+        turt.speed('slowest')
+        turt.pensize(3)
+
+        for rt in list_rectangles:
+            turt.showturtle()
+            turt.up()
+            turt.goto(rt.width, rt.height)
+            turt.down()
+            turt.begin_fill()
+
+            for i in range(2):
+                turt.forward(rt.width)
+                turt.left(90)
+                turt.forward(rt.height)
+                turt.left(90)
+            turt.end_fill()
+            turt.hideturtle()
+
+        for sqr in list_squares:
+            turt.showturtle()
+            turt.up()
+            turt.goto(sqr.size, sqr.size)
+            turt.down()
+            turt.begin_fill()
+
+            for i in range(2):
+                turt.forward(sqr.size)
+                turt.left(90)
+                turt.forward(sqr.size)
+                turt.left(90)
+            turt.end_fill()
+            turt.hideturtle()
+
+        turtle.exitonclick()
