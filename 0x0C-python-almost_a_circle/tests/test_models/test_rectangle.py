@@ -2,4 +2,3 @@
 """
 unittest for Rectangle class
 """
-

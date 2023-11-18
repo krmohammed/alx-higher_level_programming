@@ -49,7 +49,8 @@ class TestBaseInit(unittest.TestCase):
     def test_other_types(self):
         self.assertEqual(Base(-4).id, -4)
         self.assertTrue(Base(0).id == 0)
-        self.assertTrue(Base(False).id == False)
+        self.assertFalse(Base(False).id != False)
+
 
 class Test_ToJSON_String(unittest.TestCase):
     """
@@ -69,6 +70,7 @@ class Test_ToJSON_String(unittest.TestCase):
         with self.assertRaises(TypeError):
             Base.to_json_string()
 
+
 class Test_FromJSON_String(unittest.TestCase):
     """
     test cases for the function from_json_string()
@@ -86,6 +88,7 @@ class Test_FromJSON_String(unittest.TestCase):
     def test_no_args(self):
         with self.assertRaises(TypeError):
             Base.from_json_string()
+
 
 if __name__ == '__main__':
     unittest.main()
