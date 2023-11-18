@@ -49,7 +49,7 @@ class TestBaseInit(unittest.TestCase):
     def test_other_types(self):
         self.assertEqual(Base(-4).id, -4)
         self.assertTrue(Base(0).id == 0)
-        self.assertFalse(Base(False).id != False)
+        self.assertFalse(Base(True).id == False)
 
 
 class Test_ToJSON_String(unittest.TestCase):
