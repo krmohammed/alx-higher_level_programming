@@ -69,6 +69,23 @@ class Test_ToJSON_String(unittest.TestCase):
         with self.assertRaises(TypeError):
             Base.to_json_string()
 
+class Test_FromJSON_String(unittest.TestCase):
+    """
+    test cases for the function from_json_string()
+    """
+
+    def test_correct(self):
+        d = '[{"me": 2, "you": 4}]'
+        a = Base.from_json_string(d)
+        self.assertEqual(a, [{'me': 2, 'you': 4}])
+
+    def test_none_empty(self):
+        self.assertEqual(Base.from_json_string(None), [])
+        self.assertEqual(Base.from_json_string('[]'), [])
+
+    def test_no_args(self):
+        with self.assertRaises(TypeError):
+            Base.from_json_string()
 
 if __name__ == '__main__':
     unittest.main()
