@@ -7,8 +7,9 @@ function factorial (n) {
     return 1;
   }
   else {
-    return n * factorial(n);
+    return n * factorial(n - 1);
   }
 }
 
-factorial(num);
+const facto = factorial(num);
+console.log(facto);
