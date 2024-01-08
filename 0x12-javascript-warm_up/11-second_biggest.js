@@ -1,6 +1,6 @@
 #!/usr/bin/node
 
-function second_biggest (array) {
+function secondBiggest (array) {
   const temp = [];
 
   if (array.length === 2 || array.length === 3) {
@@ -8,7 +8,7 @@ function second_biggest (array) {
   }
 
   array.forEach((n) => {
-    num = Number(n);
+    const num = Number(n);
     if (num) {
       temp.push(num);
     }
@@ -18,5 +18,5 @@ function second_biggest (array) {
   return (temp[temp.length - 2]);
 }
 
-const sec_big = second_biggest(process.argv);
-console.log(sec_big);
+const secBig = secondBiggest(process.argv);
+console.log(secBig);
