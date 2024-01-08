@@ -1,11 +1,22 @@
 #!/usr/bin/node
 
-const args = process.argv;
-const temp = [];
+function second_biggest (array) {
+  const temp = [];
 
-args.forEach((n) => {
-  temp.push(n);
-});
+  if (array.length === 2 || array.length === 3) {
+    return (0);
+  }
 
-temp.sort();
-console.log(temp[temp.length - 2]);
+  array.forEach((n) => {
+    num = Number(n);
+    if (num) {
+      temp.push(num);
+    }
+  });
+
+  temp.sort();
+  return (temp[temp.length - 2]);
+}
+
+const sec_big = second_biggest(process.argv);
+console.log(sec_big);
