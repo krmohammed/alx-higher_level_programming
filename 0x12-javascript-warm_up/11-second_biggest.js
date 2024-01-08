@@ -1,22 +1,15 @@
 #!/usr/bin/node
 
-function secondBiggest (array) {
-  const temp = [];
+const args = process.argv;
+let temp = [];
 
-  if (array.length === 2 || array.length === 3) {
-    return (0);
+if (args.length <= 3) {
+  console.log(0);
+} else {
+  for (let i = 2, j = 0; i < args.length; i++) {
+    temp[j] = Number(args[i]);
+    j++;
   }
-
-  array.forEach((n) => {
-    const num = Number(n);
-    if (num) {
-      temp.push(num);
-    }
-  });
-
-  temp.sort();
-  return (temp[temp.length - 2]);
+  temp.sort((a, b) => b - a);
+  console.log(temp[1]);
 }
-
-const secBig = secondBiggest(process.argv);
-console.log(secBig);
