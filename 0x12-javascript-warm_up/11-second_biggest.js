@@ -1,7 +1,7 @@
 #!/usr/bin/node
 
 const args = process.argv;
-let temp = [];
+const temp = [];
 
 if (args.length <= 3) {
   console.log(0);
