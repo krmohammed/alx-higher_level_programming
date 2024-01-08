@@ -1,14 +1,10 @@
 #!/usr/bin/node
 
 const args = process.argv;
-let len;
+let len = 0;
 
-for (const x of args) {
-  len++;
-}
-
-if (len < 3) {
-  console.log('No argument');
+if (args[2]) {
+  console.log(args[2]);
 } else {
-  console.log(args[3]);
+  console.log('No argument');
 }
