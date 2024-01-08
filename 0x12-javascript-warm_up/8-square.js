@@ -8,6 +8,9 @@ if (first) {
     for (let j = 0; j < first; j++) {
       square += 'X';
     }
+    if (first - i === 1) {
+      continue;
+    }
     square += '\n';
   }
   console.log(square);
