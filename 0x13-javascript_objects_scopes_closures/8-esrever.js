@@ -6,4 +6,4 @@ exports.esrever = function (list) {
     tsil.push(list[i]);
   }
   return tsil;
-}
+};
