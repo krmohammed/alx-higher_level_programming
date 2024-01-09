@@ -9,11 +9,16 @@ class Rectangle {
   }
 
   print () {
+    let areaStr = '';
     for (let i = 0; i < this.height; i++) {
       for (let j = 0; j < this.width; j++) {
-        console.log('X');
+        areaStr += 'X';
+      }
+      if (this.height - i > 1) {
+        areaStr += '\n';
       }
     }
+    console.log(areaStr);
   }
 
   rotate () {
