@@ -8,19 +8,16 @@ module.exports = class Square extends Rectangle {
   }
 
   charPrint (c) {
-    if (c) {
-      let areaStr = '';
-      for (let i = 0; i < this.height; i++) {
-        for (let j = 0; j < this.width; j++) {
-          areaStr += c;
-        }
-        if (this.height - i > 1) {
-          areaStr += '\n';
-        }
+    let areaStr = '';
+    const ch = c ? c : 'X';
+    for (let i = 0; i < this.height; i++) {
+      for (let j = 0; j < this.width; j++) {
+        areaStr += ch;
       }
-      console.log(areaStr);
-    } else {
-      super.print();
+      if (this.height - i > 1) {
+        areaStr += '\n';
+      }
     }
+    console.log(areaStr);
   }
 };
