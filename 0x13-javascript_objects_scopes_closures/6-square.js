@@ -20,7 +20,7 @@ module.exports = class Square extends Rectangle {
       }
       console.log(areaStr);
     } else {
-        super.print();
+      super.print();
     }
   }
 };
