@@ -9,10 +9,10 @@ module.exports = class Square extends Rectangle {
 
   charPrint (c) {
     let areaStr = '';
-    const ch = c ? c : 'X';
+    if (!c) c = 'X';
     for (let i = 0; i < this.height; i++) {
       for (let j = 0; j < this.width; j++) {
-        areaStr += ch;
+        areaStr += c;
       }
       if (this.height - i > 1) {
         areaStr += '\n';
