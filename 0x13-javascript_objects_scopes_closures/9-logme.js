@@ -1,7 +1,9 @@
 #!/usr/bin/node
 
-let counter = 0;
 exports.logMe = function (item) {
-  console.log(`${counter} - ${item}`);
-  counter++;
+  if (typeof this.counter == 'undefined') {
+    this.counter = 0;
+  }
+  console.log(`${this.counter} - ${item}`);
+  this.counter++;
 };
