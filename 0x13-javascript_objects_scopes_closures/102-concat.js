@@ -1,18 +1,21 @@
 #!/usr/bin/node
 
 const fs = require('fs');
-conast args = process.argv;
 
-const contentA = fs.readFile(args[2], 'utf-8', (err) => {
-  if (err) throw err;
-});
+function concatFiles(file1, file2, destination) {
+  try {
+    const dataFile1 = fs.readFileSync(file1, 'utf-8');
+    const dataFile2 = fs.readFileSync(file2, 'utf-8');
+    const concatenatedData = `${dataFile1}${dataFile2}`;
 
-const contentB = fs.readFile(args[3], 'utf-8', (err) => {
-  if (err) throw err;
-});
+    fs.writeFileSync(destination, concatenatedData);
 
-const concatenated = contentA + contentB;
+  } catch (error) {
+    throw error;
+  }
+}
 
-fs.writeFile(args[4], concatenated, (err) => {
-  if (err) throe err;
-})
+const args = process.argv;
+
+concatFiles(args[2], args[3], args[4]);
+
