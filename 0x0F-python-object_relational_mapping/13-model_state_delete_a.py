@@ -15,7 +15,7 @@ if __name__ == '__main__':
     Session = sessionmaker(bind=engine)
     session = Session()
     deleted = session.query(State).filter(State.name.like('%a%'))
-    
+
     for row in deleted:
         session.delete(row)
     session.commit()
