@@ -12,6 +12,7 @@ Base = declarative_base()
 
 class State(Base):
     """
+    State class mapping to a `states` table
     """
     __tablename__ = 'states'
 
