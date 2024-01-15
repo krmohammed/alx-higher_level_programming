@@ -22,12 +22,8 @@ if __name__ == "__main__":
                     WHERE states.name LIKE %s \
                     ORDER BY cities.id ASC", (sys.argv[4],))
     rows = c.fetchall()
-
-    for row in rows:
-        for i in row:
-            print(i, end='')
-        if row != rows[-1]:
-            print(", ", end='')
+    row = ", ".join([r[0] for r in rows])
+    print(row)
 
     c.close()
     conn.close()
