@@ -1,3 +1,3 @@
-#!/usr/bin/bash
+#!/bin/bash
 response=$(curl -s -o out.txt -w "%{size_download}" "$1")
 echo "$response"
