@@ -1,3 +1,3 @@
 #!/bin/bash
-# send a delete request
+# sends a delete request
 response=$(curl -s -X DELETE "$1"); echo "$response"
