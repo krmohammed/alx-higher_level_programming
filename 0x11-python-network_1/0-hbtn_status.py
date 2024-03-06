@@ -3,6 +3,6 @@
 import urllib
 
 
-with urllib.Request.urlopen("https://alx-intranet.hbtn.io/status") as resp:
+with urllib.request.urlopen("https://alx-intranet.hbtn.io/status") as resp:
     res = resp.read()
 print(res)
