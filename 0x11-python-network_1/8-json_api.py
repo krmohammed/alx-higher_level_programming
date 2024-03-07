@@ -5,17 +5,16 @@ import sys
 
 
 if __name__ == "__main__":
-    param = {}
-    if len(sys.argv) > 1:
-        if type(sys.argv[1]) == "str" and len(sys.argv[1]) == 1:
-            param["q"] = sys.argv[1]
-        else:
-            param["q"] = ""
-    resp = requests.post("http://0.0.0.0:5000/search_user", params=param)
+    if len(sys.argv) < 2:
+        val = ""
+    else:
+        val = sys.argv[1]
+    param = {"q": val}
+    resp = requests.post("http://0.0.0.0:5000/search_user", data=param)
     try:
-        a = resp.json()
+        resp_json = resp.json()
         if a:
-            print("[{}] {}".format(a.id, a.name))
+            print("[{}] {}".format(resp_json["id"], resp_json["name"]))
         else:
             print("No result")
     except Exception:
