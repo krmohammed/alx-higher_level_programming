@@ -7,7 +7,7 @@ import sys
 if __name__ == "__main__":
     param = {}
     if len(sys.argv) > 1:
-        if type(str, sys.argv[1]) && len(sys.argv[1]) == 1:
+        if type(sys.argv[1]) == "str" and len(sys.argv[1]) == 1:
             param["q"] = sys.argv[1]
         else:
             param["q"] = ""
