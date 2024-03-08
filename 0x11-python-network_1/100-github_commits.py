@@ -12,8 +12,8 @@ if __name__ == "__main__":
     resp = requests.get(url)
     if resp.status_code == 200:
         commits = resp.json()
-        for i in range(10):
+        for commit in commits[:10]:
             print("{}: {}".format(
-                commits[i].get("sha"),
-                commits[i].get("commit").get("author").get("name")
+                commit.get("sha"),
+                commit.get("commit").get("author").get("name")
                 ))
