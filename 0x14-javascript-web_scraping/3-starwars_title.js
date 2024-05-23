@@ -7,6 +7,7 @@ const url = `https://swapi-api.alx-tools.com/api/films/${id}`;
 request.get(url, (error, response, body) => {
   if (error) {
     console.error('Error:', error);
+    return;
   }
   if (response.statusCode === 200) {
     const movie = JSON.parse(body);
