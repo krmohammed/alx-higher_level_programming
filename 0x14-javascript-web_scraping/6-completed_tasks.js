@@ -21,5 +21,6 @@ request.get(url, (error, response, body) => {
         completed[user.userId] = 1;
       }
     });
+    console.log(completed);
   }
 });
